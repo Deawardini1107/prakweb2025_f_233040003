@@ -1,15 +1,28 @@
-<?php
-
-namespace App\Http\Controllers;
-
-use App\Models\Post;
-
-class PostController extends Controller
+public function edit(Post $post)
 {
-    public function index()
-    {
-        $posts = Post::with(['user', 'category'])->get();
-        return view('posts', compact('posts'));
-    }
+    return view('posts.edit', [
+        'post' => $post,
+        'users' => \App\Models\User::all(),
+        'categories' => \App\Models\Category::all()
+    ]);
 }
 
+public function update(Request $request, Post $post)
+{
+    $request->validate([
+        'title' => 'required',
+        'body' => 'required',
+        'user_id' => 'required',
+        'category_id' => 'required',
+    ]);
+
+    $post->update($request->all());
+
+    return redirect('/posts')->with('success', 'Post berhasil diupdate');
+}
+
+public function destroy(Post $post)
+{
+    $post->delete();
+    return redirect('/posts')->with('success', 'Post berhasil dihapus');
+}

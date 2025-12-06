@@ -12,5 +12,8 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/posts', [PostController::class, 'index']);
-Route::get('/categories', [CategoryController::class, 'index']);
+// Posts CRUD
+Route::resource('posts', PostController::class);
+
+// Categories CRUD
+Route::resource('categories', CategoryController::class);

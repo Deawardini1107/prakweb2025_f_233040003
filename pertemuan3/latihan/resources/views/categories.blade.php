@@ -1,12 +1,24 @@
 <x-layout>
     <x-slot:title>Categories</x-slot:title>
 
-    <h2>All Categories</h2>
+    <h1>Category List</h1>
+
+    <a href="/categories/create">+ Add Category</a>
 
     <ul>
-        @foreach ($categories as $category)
-            <li>{{ $category->name }}</li>
+        @foreach ($categories as $cat)
+            <li>
+                {{ $cat->name }}
+
+                <a href="/categories/{{ $cat->id }}/edit">Edit</a>
+
+                <form action="/categories/{{ $cat->id }}" method="POST" style="display:inline;">
+                    @csrf
+                    @method('DELETE')
+                    <button>Delete</button>
+                </form>
+
+            </li>
         @endforeach
     </ul>
-
 </x-layout>
