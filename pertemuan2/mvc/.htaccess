@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Jika file atau direktori tidak ada, redirect ke index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]
+
+# Arahkan root ke index.php
+DirectoryIndex index.php
