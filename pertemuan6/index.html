@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 6 - Index</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: block;
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .link-card h2 {
+            margin-bottom: 8px;
+            font-size: 1.5em;
+        }
+
+        .link-card p {
+            opacity: 0.9;
+            font-size: 0.95em;
+        }
+
+        .folder-structure {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .folder-structure .folder {
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .folder-structure .file {
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>📚 Pertemuan 6</h1>
+        <p class="subtitle">Tugas JavaScript & Node.js</p>
+
+        <div class="links">
+            <a href="js-dasar/index.html" class="link-card">
+                <h2>1. JavaScript Dasar</h2>
+                <p>Variable, If-Else, Function, Array & Object</p>
+            </a>
+
+            <a href="dom/index.html" class="link-card">
+                <h2>2. DOM Manipulation</h2>
+                <p>getElementById, addEventListener, classList.toggle</p>
+            </a>
+
+            <div class="link-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <h2>3. Node.js</h2>
+                <p>Module Export/Import - Jalankan di terminal: <code>node nodeJS/index.js</code></p>
+            </div>
+        </div>
+
+        <div class="folder-structure">
+            <div><span class="folder">📁 pertemuan6/</span></div>
+            <div>&nbsp;&nbsp;<span class="folder">📁 js-dasar/</span></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">📄 index.html</span></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">📄 script.js</span></div>
+            <div>&nbsp;&nbsp;<span class="folder">📁 dom/</span></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">📄 index.html</span></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">📄 dom.js</span></div>
+            <div>&nbsp;&nbsp;<span class="folder">📁 nodeJS/</span></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">📄 index.js</span></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">📄 kasir.js</span></div>
+        </div>
+    </div>
+</body>
+
+</html>
